@@ -23,9 +23,23 @@ export const Title = styled.h1`
     border-top: 3px solid var(--secondary-purple-D);
     border-bottom: 3px solid var(--secondary-purple-D);
     position: absolute;
-    width: 200%;
+
+    width: 112%;
     top: 50%;
-    left: -50%;
+    right: 0%;
+    z-index: -999;
+  }
+
+  &:after {
+    content: "";
+    height: 5px;
+    border-top: 3px solid var(--secondary-purple-D);
+    border-bottom: 3px solid var(--secondary-purple-D);
+    position: absolute;
+
+    width: 112%;
+    top: 50%;
+    left: 0%;
     z-index: -999;
   }
 `;

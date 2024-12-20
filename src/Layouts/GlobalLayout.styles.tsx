@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: calc(100vw - 60px);
   height: calc(100vh - 60px);
 
+  min-width: 710px;
+
   padding: 30px;
 
   background: linear-gradient(transparent, #c6c7f8);
