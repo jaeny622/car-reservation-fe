@@ -1,3 +1,3 @@
-# video-handling
+# car reservation project
 
-nomad coder의 clone coding을 기존 기술 스택에서 변형된 형태로 만든 프로젝트입니다.
+차를 공유하고 있는 엄마아들과 저를 위한 차 예약 시스템 제작 토이 프로젝트입니다.
