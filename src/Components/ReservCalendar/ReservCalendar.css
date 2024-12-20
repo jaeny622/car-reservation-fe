@@ -1,0 +1,136 @@
+.react-calendar {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: "nav" "content";
+
+  font-family: "Single Day", serif;
+  font-size: 20px;
+
+  background-color: #fff;
+  border-radius: 30px;
+
+  & button {
+    background-color: transparent;
+  }
+}
+
+/** 년-월 navigation */
+.react-calendar__navigation {
+  grid-area: nav;
+
+  width: 100%;
+  display: flex;
+  justify-self: center;
+
+  background-color: var(--secondary-purple-B);
+  border-radius: 30px 30px 0px 0px;
+
+  & > button {
+    border: 0px;
+
+    &:hover {
+      &:first-of-type {
+        border-radius: 30px 0px 0px 0px;
+      }
+      &:last-of-type {
+        border-radius: 0px 30px 0px 0px;
+      }
+
+      background-color: var(--secondary-purple-A);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/** navigation label */
+.react-calendar__navigation__label {
+  font-size: 30px;
+}
+
+/** navigation button */
+.react-calendar__navigation__arrow {
+  &:hover {
+    outline: none;
+  }
+}
+
+.react-calendar__navigation__arrow--active {
+  border: red;
+}
+
+/** 달력 contents */
+.react-calendar__viewContainer {
+  grid-area: content;
+
+  padding-top: 30px;
+
+  & .react-calendar__month-view {
+    width: 100%;
+    height: 100%;
+
+    & > div,
+    & > div > div {
+      width: inherit;
+      height: inherit;
+    }
+
+    & > div > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50px 1fr;
+    }
+  }
+}
+
+/** 각 요일 box */
+.react-calendar__month-view__weekdays__weekday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > abbr {
+    text-decoration: none;
+  }
+}
+
+/** 주변 month day */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: var(--gray-400);
+}
+
+.react-calendar__tile {
+  border-radius: 30px;
+
+  &:hover {
+    border: 2px solid var(--secondary-purple-A);
+    border-radius: 30px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/** 날짜 tile active */
+.react-calendar__tile--active {
+  border: 0px;
+  background: var(--secondary-purple-A) !important;
+  color: #fff;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  border: none;
+  background: var(--secondary-purple-A);
+}
