@@ -1,13 +1,18 @@
 import { Outlet } from "react-router";
 
+import * as S from "../Layouts/GlobalLayout.styles";
+
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer/Footer";
+
 export default function GlobalLayout() {
   return (
-    <div>
-      <header>
-        <h1>Home</h1>
-      </header>
-      <Outlet />
-      <footer>JS</footer>
-    </div>
+    <S.Container>
+      <Header />
+      <S.Main>
+        <Outlet />
+      </S.Main>
+      <Footer />
+    </S.Container>
   );
 }

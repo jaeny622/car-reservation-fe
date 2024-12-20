@@ -1,8 +1,10 @@
 import { Suspense, useEffect } from "react";
+import axios from "axios";
 
 import GlobalRoutes from "./Routes/Routes";
+
 import Loading from "./Pages/Loading";
-import axios from "axios";
+import { GlobalStyle } from "./Styles/GlobalStyle";
 
 function App() {
   useEffect(() => {
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <Suspense fallback={<Loading />}>
+      <GlobalStyle />
       <GlobalRoutes />
     </Suspense>
   );
