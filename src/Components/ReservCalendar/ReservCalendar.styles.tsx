@@ -7,5 +7,6 @@ export const Container = styled.div`
   display: flex;
   justify-self: center;
 
+  min-width: 700px;
   max-width: 1300px;
 `;
